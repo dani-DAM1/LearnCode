@@ -12,12 +12,11 @@ int main(void){
         for(j=0;j<quantitatParelles;j++){
             X=rand()%quantitatParelles;
             Y=rand()%quantitatParelles;
-            taulell[x][y]=figura;
-            figura++;
+            taulell[X][Y]=figura;
             do{
             x=rand()%quantitatParelles;
             y=rand()%quantitatParelles;
-            }while(X==x&&Y==y);
+            }while(X==x||Y==y);
             taulell[x][y]=figura;
             figura++;
         }
