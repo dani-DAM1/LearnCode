@@ -3,7 +3,7 @@
 #define ASCII 65
 int main(void){
 
-    int quantitatParelles,figura=ASCII,X=0,Y=0,x,y,i,j;
+    int quantitatParelles,figura=ASCII,X,Y,x,y,i,j;
     srand(time(NULL));
 
     printf ("intro parelles");
@@ -11,12 +11,10 @@ int main(void){
     int taulell[2][quantitatParelles];
 
     for(i=0;i<2;i++){
-        printf("\n");
-        for(j=0;j<quantitatParelles;j++){
-            printf("| %d ",taulell[i][j]);
+        for(j=0;j<3;j++){
+            taulell[x][y]=0;
         }
     }
-
     for(i=0;i<2;i++){
             for(j=0;j<=quantitatParelles;j++){
                 do{
@@ -31,7 +29,6 @@ int main(void){
                 taulell[x][y]=figura;
                 figura++;
             }
-
     }
     for(i=0;i<2;i++){
         printf("\n");
