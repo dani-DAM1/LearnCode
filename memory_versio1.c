@@ -16,7 +16,7 @@ getchar();
 int taulell[2][parelles];
 omplirmatriu();
 printf("Prem qualsevol tecla per iniciar el joc.\n");
-scanf("%c");
+
 getchar();
 return 0;
 }
