@@ -2,7 +2,7 @@
 #define ASCII 65
 int main(void){
 
-    int quantitatParelles,figura=ASCII,X,Y,x,y;
+    int quantitatParelles,figura=ASCII,X,Y,x,y,i,j;
     srand(time(NULL));
     printf ("intro parelles");
     scanf("%d",&quantitatParelles);
@@ -20,6 +20,12 @@ int main(void){
             }while(X==x&&Y==y);
             taulell[x][y]=figura;
             figura++;
+        }
+    }
+    for(i=0;i<2;i++){
+        printf("\n");
+        for(j=0;j<quantitatParelles;j++){
+            printf("| %d ",taulell[i][j]);
         }
     }
 
