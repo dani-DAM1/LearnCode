@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<time.h>
 #define ASCII 65
-int main(void){
 
+int main(void){
     int quantitatParelles,figura=ASCII,X,Y,x,y,i,j;
     srand(time(NULL));
 
@@ -10,16 +10,16 @@ int main(void){
     scanf("%d",&quantitatParelles);
     int taulell[2][quantitatParelles];
 
+    //Omplir columnes 1, 2 , 3, 4, 5
     for(i=0;i<2;i++){
-        for(j=0;j<3;j++){
-            taulell[x][y]=0;
-        }
+        for(j=0;j<quantitatParelles;j++)
+            taulell[i][j]=0;
     }
     for(i=0;i<2;i++){
             for(j=0;j<=quantitatParelles;j++){
                 do{
-                    X=rand()%quantitatParelles-1;
-                    Y=rand()%quantitatParelles-1;
+                    X=rand()%quantitatParelles;
+                    Y=rand()%quantitatParelles;
                 }while(taulell[X][Y]!=0);
                 taulell[X][Y]=figura;
                 do{
@@ -37,4 +37,12 @@ int main(void){
         }
     }
 
+    for(i=0;i<2;i++){
+            printf ("\n");
+        for(j=0;j<quantitatParelles;j++){
+            printf ("%d ", taulell[i][j]);
+        }
+    }
+
+    return 0;
 }
