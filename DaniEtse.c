@@ -5,8 +5,9 @@
 int main(void){
     int quantitatParelles,figura=ASCII,X,Y,x,y,i,j;
     srand(time(NULL));
-
-    printf ("intro parelles");
+    printf("JOC del MEMORY\n");
+    printf("--------------\n\n");
+    printf ("Introdueix la quantitat de parelles:\n");
     scanf("%d",&quantitatParelles);
     int taulell[2][quantitatParelles];
 
@@ -14,15 +15,19 @@ int main(void){
         for(j=0;j<quantitatParelles;j++)
             taulell[i][j]=0;
     }
-    for(i=0;i<2;i++){
-            for(j=0;j<=quantitatParelles;j++){
-                //do{
-                X=rand()%quantitatParelles;
-                Y=rand()%quantitatParelles;
-                //}while(taulell[X][Y]!=0);
-                taulell[X][Y]=figura;
-                figura++;
-            }
+
+    for(j=0;j<quantitatParelles;j++){
+        do{
+            X=rand()%quantitatParelles;
+            Y=rand()%quantitatParelles;
+        }while(taulell[X][Y]!=0);
+        taulell[X][Y]=figura;
+        do{
+            X=rand()%quantitatParelles;
+            Y=rand()%quantitatParelles;
+        }while(taulell[X][Y]!=0);
+        taulell[X][Y]=figura;
+    figura++;
     }
     for(i=0;i<2;i++){
         printf("\n");
