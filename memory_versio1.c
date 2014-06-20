@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
-int quantitatcartes;
+int parelles;
 void main(){
 
-printf("Digues el nombre de cartes que vols:\n");
-scanf("%d",&quantitatcartes);
+printf("Digues el nombre de parelles que vols:\n");
+scanf("%d",&parelles);
+getchar();
 }
