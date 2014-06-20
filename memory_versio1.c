@@ -9,7 +9,7 @@ void mostrarTaulell();
 void amagarCartes();
 
 int main (){
-int quantitatParelles,teclaInici,figura=ASCII,X,Y,x,y,i,j;
+int quantitatParelles,teclaInici,figura=ASCII,figura2=ASCII,X,Y,x,y,i,j;
 srand(time(NULL));
 
 printf ("Benvingut al joc 'Memory'.\n\nQuina quantitat de parelles vols?: ");
@@ -19,20 +19,29 @@ for(i=0;i<2;i++){
     for(j=0;j<quantitatParelles;j++){
         X=rand()%quantitatParelles;
         Y=rand()%quantitatParelles;
-        taulell[x][y]=figura;
-        do{
+        taulell[X][Y]=figura;
+
             x=rand()%quantitatParelles;
             y=rand()%quantitatParelles;
-            }while(X==x||Y==y);
-            taulell[x][y]=figura;
+
+            taulell[x][y]=figura2;
         }
         figura++;
+        figura2++;
+
     }
 
 //mostrarTaulell ();
 
+    for(i=0;i<2;i++){
+            printf ("\n");
+        for(j=0;j<quantitatParelles;j++){
+            printf ("%d ", taulell[i][j]);
+        }
+    }
+
 printf ("\nPrem qualsevol tecla per amagar les cartes i comen�ar el joc\n");
-scanf ("%d",&teclaInici);
+getchar();
 
 //amagarCartes();
 
